@@ -17,7 +17,7 @@ const Preturi = () => {
   return (
     <section>
       {/* <div className="py-20 lg:py-32 bg-[url('/topography.svg')] bg-contain bg-center"> */}
-      <div className="py-10 lg:py-32 bg-topo relative">
+      <div className="py-10 lg:py-20 bg-topo relative">
         <div className="absolute z-5 top-0 left-0 w-full h-full bg-gradient-to-br from-white to-transparent" />
         <div className="space-y-10 lg:space-y-16 z-10 relative">
           <div className="text-4xl font-serif max-w-screen-xl w-full mx-auto px-4 sm:px-6 lg:px-8">

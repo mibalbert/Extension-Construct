@@ -38,8 +38,20 @@ import {
 import { onSubmit } from "@/app/_actions";
 
 const CalculatorServicii = () => {
-  const [servicesArr, setServicesArr] = useState([]);
-
+  const [servicesArr, setServicesArr] = useState([
+    {
+      name: "Glet de incarcare",
+      measure: "MP",
+      num: 1,
+      price: "20 lei",
+    },
+    {
+      name: "Glet de finisare",
+      measure: "MP",
+      num: 1,
+      price: "20 lei",
+    },
+  ]);
   const handleOnDelete = ({ name }) => {
     setServicesArr((prev) => prev.filter((el) => el.name !== name));
   };
@@ -155,11 +167,11 @@ const CalculatorServicii = () => {
         </div>
 
         <hr className="my-6" />
-        <div className="grid grid-cols-2 pb-4 space-y-4">
-          <div className=" col-span-2 lg:col-span-1  items-center lg:mt-7 lg:mb-2">
+        <div className="grid grid-cols-2 w-full pb-4 lg:pb-0 space-y-4 lg:space-y-0 gap-10">
+          <div className=" col-span-2 lg:col-span-1 flex items-center ">
             <div className="flex flex-grow lg:justify-center">
               <Dialog>
-                <DialogTrigger className="border rounded-lg text-md w-full lg:text-lg bg-gray-50 px-3 py-1.5 whitespace-nowrap">
+                <DialogTrigger className="border rounded-lg text-md w-full mx-auto lg:max-w-xs lg:text-lg bg-gray-50 px-3 py-1.5 whitespace-nowrap">
                   +Adauga Serviciu
                 </DialogTrigger>
                 <DialogContent className="max-w-3xl w-[90%] sm:w-[80%] ">
@@ -482,10 +494,10 @@ const CalculatorServicii = () => {
               </Dialog>
             </div>
           </div>
-          <div className="col-span-2 lg:col-span-1  w-full items-center justify-end">
+          <div className="col-span-2 lg:col-span-1 flex w-full items-center  justify-center ">
             <Dialog>
-              <DialogTrigger className="border text-md w-full lg:text-lg border-gray-300 shadow-sm rounded-lg bg-white px-4 py-1.5 flex items-center gap-2 font-serif">
-                <span className=" flex items-center gap-2 justify-center w-full">
+              <DialogTrigger className="border text-md w-full lg:max-w-xs lg:text-lg border-gray-300 shadow-sm rounded-lg bg-white px-4 py-1.5 flex items-center gap-2 font-serif">
+                <span className=" flex items-center gap-2 justify-center w-full ">
                   <Send className="w-3 h-3 lg:w-5 lg:h-5" />
                   <span>Total:</span>
                   <span>
