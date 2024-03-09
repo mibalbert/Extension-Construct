@@ -7,18 +7,18 @@ import Container from "./Container";
  */
 export default function ContactUs() {
   return (
-    <section className="w-full  py-24 lg:py-32 bg-gray-50 dark:bg-gray-950">
+    <section className="w-full  py-24 lg:py-32 bg-gray-900">
       <Container>
         <div className="grid lg:grid-cols-2 w-full  gap-12">
           <div className="flex items-center text-center lg:text-start justify-center lg:justify-start">
             <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+              <div className="inline-block rounded-lg bg-gray-700 px-3 py-1 text-sm text-white">
                 Get in Touch
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-serif">
+              <h2 className="text-3xl font-bold  sm:text-5xl font-serif  text-white">
                 Contact our Sales Team
               </h2>
-              <p className="max-w-[500px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              <p className="max-w-[500px] text-gray-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 {`Ready to get started? Fill out the form below and we'll be in
                 touch shortly to help you with your request.
               `}
@@ -27,20 +27,20 @@ export default function ContactUs() {
           </div>
           <div className="flex flex-col  justify-center  w-full h-full gap-5">
             <div className="flex items-center space-x-4 max-w-xs mx-auto w-full">
-              <PhoneIcon className="w-6 h-6 flex-shrink-0" />
-              <div className="leading-none">
-                <h3 className="font-medium tracking-wider">Call Us</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Reach us at 1-234-567-8901
-                </p>
+              <PhoneIcon className="w-6 h-6 flex-shrink-0 text-white" />
+              <div className="leading-none space-y-2">
+                <h3 className="font-medium text-white">
+                  Sunati-ne la Telefon:
+                </h3>
+                <p className="text-sm text-white ">0791234567</p>
               </div>
             </div>
             <div className="flex items-center space-x-4 max-w-xs mx-auto w-full">
-              <MailIcon className="w-6 h-6 flex-shrink-0" />
-              <div className="leading-none">
-                <h3 className="font-medium tracking-wider">Email</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Send us an email at sales@example.com
+              <MailIcon className="w-6 h-6 flex-shrink-0 text-white" />
+              <div className="leading-none space-y-2">
+                <h3 className="font-medium text-white">Email</h3>
+                <p className="text-sm text-white">
+                  marketing.extension.con@gmail.com
                 </p>
               </div>
             </div>

@@ -42,24 +42,33 @@ const DFeatures = () => {
         </TabsContent>
       </div>
       <TabsList className="col-span-2 flex flex-col h-full bg-none space-y-3  justify-evenly">
-        <TabsTrigger value="account" className="w-full h-full bg-none">
-          <div>Account</div>
+        <TabsTrigger
+          value="account"
+          className="w-full h-full bg-none text-left space-y-3 px-10"
+        >
+          <div className="text-2xl">Account</div>
           <div>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam et
             perspiciatis, earum autem adipisci soluta sequi ex. Beatae, quidem
             veritatis.
           </div>
         </TabsTrigger>
-        <TabsTrigger value="password" className="w-full h-full bg-none">
-          <div>Password</div>
+        <TabsTrigger
+          value="password"
+          className="w-full h-full bg-none  text-left space-y-3 px-10"
+        >
+          <div className="text-2xl">Password</div>
           <div>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam et
             perspiciatis, earum autem adipisci soluta sequi ex. Beatae, quidem
             veritatis.
           </div>
         </TabsTrigger>
-        <TabsTrigger value="password2" className="w-full h-full bg-none">
-          <div>Password2</div>{" "}
+        <TabsTrigger
+          value="password2"
+          className="w-full h-full bg-none  text-left space-y-3 px-10"
+        >
+          <div className="text-2xl"> Password2</div>{" "}
           <div>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam et
             perspiciatis, earum autem adipisci soluta sequi ex. Beatae, quidem

@@ -1,17 +1,12 @@
+/**
+ * Hero.jsx
+ */
+
 import React from "react";
 import Container from "./Container";
 import Title from "./Title";
-import Image from "next/image";
-import Button from "./Button";
-import { BsPlayCircle } from "react-icons/bs";
-import playStore from "@/images/playStore.png";
-import ExtraLogos from "./ExtraLogos";
 import BackgroundDesign from "./BackgroundDesign";
-import PhoneFrame from "./PhoneFrame";
-import AppFeature from "./AppFeature";
 import Link from "next/link";
-import { PhoneCallIcon } from "lucide-react";
-import { PhoneIcon } from "lucide-react";
 import { ArrowRightIcon } from "lucide-react";
 import { Calculator } from "lucide-react";
 
@@ -47,16 +42,16 @@ const Hero = () => {
               </Button> */}
               <Link
                 href={"/contact"}
-                className="bg-white px-3 py-1.5 rounded-lg text-2xl w-full max-w-xs flex items-center gap-2 "
+                className="bg-white px-3 py-1.5 rounded-lg text-xl w-full max-w-xs flex items-center gap-2 "
               >
-                <ArrowRightIcon className="w-6 h-6" />
+                <ArrowRightIcon className="w-5 h-5" />
                 <span className="font-serif">Contact</span>
               </Link>
               <Link
                 href="/preturi"
-                className="bg-white px-3 py-1.5 rounded-lg text-2xl flex items-center w-full max-w-xs gap-2 "
+                className="bg-white px-3 py-1.5 rounded-lg text-xl flex items-center w-full max-w-xs gap-2 "
               >
-                <Calculator className="w-6 h-6" />
+                <Calculator className="w-5 h-5" />
                 <span className="font-serif">Calculator</span>
               </Link>
             </div>
