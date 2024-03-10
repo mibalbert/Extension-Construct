@@ -26,39 +26,44 @@ const Hero = () => {
       {/* <div className="absolute top-0 left-0 w-full h-full supports-[backdrop-blur] backdrop-blur-sm "></div> */}
       <div
         className={
-          "relative z-50 h-full bg-gray-900/50 backdrop-blur-md w-full "
+          "relative z-5 h-full bg-gray-900/60 backdrop-blur-sm w-full "
         }
       >
-        <div className="h-full grid grid-rows-3  py-10 px-12 w-full max-w-screen-xl mx-auto ">
-          <div className="row-span-2 flex flex-col justify-center space-y-3">
-            <h1 className="text-8xl font-bold font-serif text-white">
+        <div className="h-full grid grid-rows-3  py-10  w-full max-w-screen-xl mx-auto ">
+          <div className="row-span-2 text-center md:text-left flex flex-col px-5 justify-center space-y-3">
+            <h1 className="text-5xl lg:text-[110px] leading-none font-bold  tracking-tight text-white">
               EXTENSION CONSTRUCT
             </h1>
             <p className="text-xl text-gray-100">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laboriosam placeat voluptatem itaque.
+              Laboriosam placeat voluptatem itaque.asjkd nasjd 
             </p>
           </div>
           <div className="row-span-1">
-            <div className="grid grid-cols-3 gap-5 h-full">
+            <div className="grid  grid-cols-1 lg:grid-cols-3 gap-5 h-full px-10 lg:px-0">
               <Link
                 href={"/contact"}
-                className="flex items-center border bg-white rounded-lg w-full h-full justify-center hover:scale-105 transition-all duration-200 "
+                className="flex items-center  border relative bg-white rounded-lg w-full h-full justify-center hover:scale-105 transition-all duration-200 bg-grid-small-black/[0.2] "
               >
+                <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
                 <Phone className="h-4 w-4 mr-2" />
                 Contact <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href={"/preturi"}
-                className="flex items-center border bg-white rounded-lg w-full h-full justify-center hover:scale-105 transition-all duration-200"
+                className="flex items-center border bg-white  rounded-lg w-full h-full justify-center hover:scale-105 transition-all duration-200 bg-dot-black/[0.2] relative"
               >
+                {" "}
+                <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
                 <Calculator className="h-4 w-4 mr-2" />
                 Calculator <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href={"/blog"}
-                className="flex items-center border bg-white rounded-lg w-full h-full justify-center hover:scale-105 transition-all duration-200"
+                className="flex items-center border bg-white rounded-lg  w-full h-full justify-center hover:scale-105 transition-all duration-200 bg-grid-black/[0.1]  relative"
               >
+                {" "}
+                <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
                 <Info className="h-4 w-4 mr-2" />
                 Blog <ArrowRight className="h-4 w-4" />
               </Link>
