@@ -8,8 +8,8 @@ import { ArrowRight } from "lucide-react";
 const BlogPostsPage = () => {
   return (
     <div className="px-4 py-6 md:px-6 md:py-12 lg:py-16 w-full">
-      <Container className={" "}>
-        <h1 className="text-center text-3xl font-serif">
+      <Container className={"space-y-4 "}>
+        <h1 className="text-center text-3xl md:text-5xl font-serif font-bold">
           Citeste Blogul nostru
         </h1>
         <h3 className="text-center text-md font-extrathin">
@@ -23,12 +23,12 @@ const BlogPostsPage = () => {
             <Link
               key={idx}
               href={`/blog/${post.id}`}
-              className="flex flex-col space-y-4 col-span-1 hover:bg-gray-100 p-5 rounded-lg"
+              className="flex flex-col space-y-4 col-span-1 hover:bg-gray-100 p-5 "
             >
               <div className="space-y-2">
                 <Image
                   alt="Image 1"
-                  className="object-cover rounded-lg"
+                  className="object-cover "
                   height={250}
                   src={post.heroUrl}
                   style={{

@@ -16,13 +16,13 @@ const OneBlogPage = ({ params }) => {
   }
 
   return (
-    <section className="py-12 px-8   gap-10 w-full mx-auto">
-      <Container>
+    <section className="p-4 md:py-12 md:px-8   gap-10 w-full mx-auto">
+      <Container className={"px-0 my-3 "}>
         <Link href={"/blog"} className="flex items-center gap-1">
           <ArrowLeft className="h-4 w-4" /> <span>Toate Blogurile</span>
         </Link>
       </Container>
-      <div className="p-5 mx-auto sm:p-10 md:p-16  dark:bg-gray-800 dark:text-gray-100">
+      <div className=" mx-auto w-full sm:p-10 md:p-16   dark:text-gray-100">
         <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
           <div className="w-full h-60 sm:h-96 dark:bg-gray-500 relative">
             <Image
@@ -32,7 +32,7 @@ const OneBlogPage = ({ params }) => {
               className="object-cover object-center"
             />
           </div>
-          <div className="p-6 py-12 m-4 mx-auto relative z-10 -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md  bg-gray-900">
+          <div className="p-6 py-12 m-4 mx-auto relative z-10 -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md  bg-gray-900 text-white">
             <div className="space-y-4">
               <h1 className="inline-block text-2xl font-semibold sm:text-3xl">
                 {postData.heroTitle}
@@ -43,7 +43,7 @@ const OneBlogPage = ({ params }) => {
         </div>
       </div>
       {/* <div className="mx-auto w-full col-span-2  left-6"> */}
-      <div className="mx-auto w-full  max-w-screen-sm   ">
+      <div className="mx-auto w-[90%]  max-w-screen-sm    ">
         <Typography color="blue" variant="h6">
           {postData?.tags?.map((tag, idx) => {
             return (
