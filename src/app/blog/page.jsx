@@ -17,7 +17,7 @@ const BlogPostsPage = () => {
           recusandae natus. Eligendi.
         </h3>
       </Container>
-      <div className="py-20 grid gap-6 lg:gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-screen-2xl w-full mx-auto">
+      <div className="py-20 grid gap-6 lg:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-2xl w-full mx-auto">
         {blogPosts.map((post, idx) => {
           return (
             <Link
@@ -48,7 +48,7 @@ const BlogPostsPage = () => {
                 className="self-start mt-auto flex items-center gap-1"
                 href="#"
               >
-                Read More
+                Citeste
                 <ArrowRight className="h-4 w-4" />
               </div>
             </Link>

@@ -171,11 +171,11 @@ const CalculatorServicii = () => {
         </div>
 
         <hr className="my-6" />
-        <div className="grid grid-cols-2 w-full pb-4 lg:pb-0 space-y-4 lg:space-y-0 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full pb-4 lg:pb-0 space-y-4 lg:space-y-0  md:gap-10">
           <div className=" col-span-2 lg:col-span-1 flex items-center ">
             <div className="flex flex-grow lg:justify-center">
               <Dialog>
-                <DialogTrigger className="border rounded-lg text-md w-full mx-auto lg:max-w-xs lg:text-lg bg-gray-50 px-3 py-1.5 whitespace-nowrap">
+                <DialogTrigger className="border rounded-lg text-md w-full mx-auto lg:max-w-xs lg:text-lg bg-gray-900 text-white px-3 py-1.5 whitespace-nowrap">
                   +Adauga Serviciu
                 </DialogTrigger>
                 <DialogContent className="max-w-3xl w-[90%] sm:w-[80%] ">
@@ -527,7 +527,7 @@ const CalculatorServicii = () => {
                       try {
                         const res = onSubmit(data, servicesArr);
 
-                        console.log(res)
+                        console.log(res);
                         if (res.ok) {
                           toast({
                             title: res.message,

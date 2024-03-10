@@ -8,7 +8,7 @@ import {
 } from "@/components/StockLogos";
 
 export const navData = [
-  { _id: 101, title: "Acasa", href: "/home" },
+  { _id: 101, title: "Acasa", href: "/" },
   { _id: 102, title: "Preturi", href: "/preturi" },
   { _id: 103, title: "Blog", href: "/blog" },
   // { _id: 103, title: "Features", href: "#features" },
