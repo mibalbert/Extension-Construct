@@ -16,7 +16,7 @@ import { Info } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="w-full h-[70vh] relative">
+    <section className="w-full h-[75vh] relative">
       <Image
         src={"/hero-img-2.webp"}
         fill
@@ -25,14 +25,16 @@ const Hero = () => {
       />
       {/* <div className="absolute top-0 left-0 w-full h-full supports-[backdrop-blur] backdrop-blur-sm "></div> */}
       <div
-        className={"relative z-50 h-full bg-white/20 backdrop-blur-md w-full "}
+        className={
+          "relative z-50 h-full bg-gray-900/50 backdrop-blur-md w-full "
+        }
       >
         <div className="h-full grid grid-rows-3  py-10 px-12 w-full max-w-screen-xl mx-auto ">
           <div className="row-span-2 flex flex-col justify-center space-y-3">
-            <h1 className="text-8xl font-bold font-serif text-gray-900">
+            <h1 className="text-8xl font-bold font-serif text-white">
               EXTENSION CONSTRUCT
             </h1>
-            <p className="text-xl text-gray-800">
+            <p className="text-xl text-gray-100">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Laboriosam placeat voluptatem itaque.
             </p>
