@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster"
 
 export const metadata = {
   title: "Extension Con. | Profesionalism la nivel de arta",

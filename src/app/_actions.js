@@ -2,13 +2,12 @@
  * _actions.js
  */
 "use server";
-
+import { render } from "@react-email/render";
 import nodemailer from "nodemailer";
+import Email from "../../emails";
 
-export async function onSubmit(data) {
+export async function onSubmit(data, services) {
   try {
-    console.log("Form data:", data);
-
     // Create a transporter for sending emails
     const transporter = nodemailer.createTransport({
       service: "Gmail",
@@ -21,14 +20,15 @@ export async function onSubmit(data) {
       },
     });
 
+    const emailHtml = render(<Email />);
+
     // Send email
     async function sendAdminEmail() {
       const info = await transporter.sendMail({
         from: '"Extension Construct" <marketing.extension.con@gmail.com>',
-        to: "bitcode222@gmail.com",
-        subject: "Hello ✔",
-        text: "Multumim ca ne-ati contactat.",
-        html: "<basjbkdakjs bdakjs bdjas bdkjasd</b>",
+        to: "marketing.extension.con@gmail.com",
+        subject: "Cerere servicii",
+        html: emailHtml,
       });
 
       console.log("Message sent: %s", info.messageId);
@@ -37,10 +37,9 @@ export async function onSubmit(data) {
     async function sendUserEmail() {
       const info = await transporter.sendMail({
         from: '"Extension Construct" <marketing.extension.con@gmail.com>',
-        to: "marketing.extension.con@gmail.com",
-        subject: "Hello ✔",
-        text: "Hello world?",
-        html: "<b>Hello world?</b>",
+        to: data.email,
+        subject: "Mutumim ca ne-ati contactat",
+        html: emailHtml,
       });
 
       console.log("Message sent: %s", info.messageId);

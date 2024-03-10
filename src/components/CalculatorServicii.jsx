@@ -2,6 +2,7 @@
  * CalculatorServicii.jsx
  */
 "use client";
+
 import React, { useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import {
@@ -22,6 +23,7 @@ import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
+import { useToast } from "@/components/ui/use-toast";
 import {
   casaLaGataData,
   casaLaRosuData,
@@ -35,6 +37,7 @@ import {
   tencuieliSiZugraveliData,
   termoizolatieFatadaData,
 } from "./table-data";
+
 import { onSubmit } from "@/app/_actions";
 
 const CalculatorServicii = () => {
@@ -85,6 +88,7 @@ const CalculatorServicii = () => {
       )
     );
   };
+  const { toast } = useToast();
 
   const {
     register,
@@ -519,7 +523,28 @@ const CalculatorServicii = () => {
                     </p>
                   </div>
                   <form
-                    onSubmit={handleSubmit((data) => onSubmit(data))}
+                    onSubmit={handleSubmit((data) => {
+                      try {
+                        const res = onSubmit(data, servicesArr);
+
+                        console.log(res)
+                        if (res.ok) {
+                          toast({
+                            title: res.message,
+                            description: "Friday, February 10, 2023 at 5:57 PM",
+                          });
+                        }
+                        toast({
+                          title: res.message,
+                          description: "Friday, February 10, 2023 at 5:57 PM",
+                        });
+                      } catch (error) {
+                        toast({
+                          title: JSON.stringify(error),
+                          description: "Friday, February 10, 2023 at 5:57 PM",
+                        });
+                      }
+                    })}
                     className="space-y-4"
                   >
                     <div className="grid grid-cols-2 gap-4">
@@ -551,10 +576,10 @@ const CalculatorServicii = () => {
                       <Input
                         id="email"
                         type="email"
-                        // className={cn("", {
-                        //   "border-red-500": errors.email,
-                        // })}
-                        {...register("email")}
+                        className={cn("", {
+                          "border-red-500": errors.email,
+                        })}
+                        {...register("email", { required: true })}
                         placeholder="ex: andreipopescu@gmail.com"
                       />
                     </div>

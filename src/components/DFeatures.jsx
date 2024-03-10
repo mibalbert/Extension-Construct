@@ -21,7 +21,7 @@ const DFeatures = () => {
             src={"/tabs/1.webp"}
             alt="1"
             fill
-            className="object-contain object-center"
+            className="object-cover object-center"
           />
         </TabsContent>
         <TabsContent value="password" className="relative w-full h-full">
@@ -29,7 +29,7 @@ const DFeatures = () => {
             src={"/tabs/2.webp"}
             alt="2"
             fill
-            className="object-contain object-center"
+            className="object-cover object-center"
           />
         </TabsContent>
         <TabsContent value="password2" className="relative w-full h-full">
@@ -37,7 +37,7 @@ const DFeatures = () => {
             src={"/tabs/3.webp"}
             alt="3"
             fill
-            className="object-contain object-center"
+            className="object-cover object-center"
           />
         </TabsContent>
       </div>

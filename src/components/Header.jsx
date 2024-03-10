@@ -54,11 +54,11 @@ const Header = () => {
           <div className="">
             <div className="hidden lg:flex lg:gap-5 items-center">
               <NavLinks />
-              <Button href="#" variant="outline" className="">
+              {/* <Button href="#" variant="outline" className="">
                 Get Advice
-              </Button>
-              <Button href="#" className="">
-                Hire me
+              </Button> */}
+              <Button  href="/contact" className="">
+                Contact
               </Button>
             </div>
             {/* Buttons */}
